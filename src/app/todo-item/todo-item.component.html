@@ -1,0 +1,12 @@
+<!-- todo-item/todo-item.component.html -->
+
+<div class="todo-item border rounded p-4 my-2 bg-white shadow-md">
+    <!-- Display the todo's title and description -->
+    <h3 class="text-lg font-bold">{{ todo.title }}</h3>
+    <p class="text-gray-700 font-semibold">{{ todo.description }}</p>
+    <p class="text-gray-700 font-semibold">Status: {{ todo.status }}</p>
+  
+    <!-- Buttons to mark as completed and delete the todo -->
+    <button (click)="markCompleted()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 focus:outline-none focus:shadow-outline">{{ todo.completed ? 'Reopen' : 'Mark Completed' }}</button>
+    <button (click)="deleteTodo()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
+</div>

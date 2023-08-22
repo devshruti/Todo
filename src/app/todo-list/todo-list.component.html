@@ -1,0 +1,11 @@
+<!-- todo-list/todo-list.component.html -->
+
+<div class="p-4">
+    <h2 class="text-2xl font-semibold mb-4">Todo List</h2>
+    <ul>
+      <!-- Loop through the todos and display each using the TodoItemComponent -->
+      <li *ngFor="let todo of todos" class="mb-2">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </li>
+    </ul>
+</div>
